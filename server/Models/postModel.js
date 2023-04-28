@@ -6,11 +6,23 @@ const postSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    description: {
+    desc: {
       type: String,
     },
     likes: [],
-    comment: [],
+    comments: [
+      {
+        userId: {
+          type: mongoose.Schema.Types.ObjectId,
+          required: true,
+          ref: "users",
+        },
+        comment: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
     image: {
       type: String,
     },
@@ -22,4 +34,3 @@ const postSchema = mongoose.Schema(
 
 var PostModel = mongoose.model("Post", postSchema);
 export default PostModel;
-

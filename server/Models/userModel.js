@@ -4,7 +4,7 @@ const userSchema = mongoose.Schema(
   {
     username: {
       type: String,
-      unique:true,
+      unique: true,
       required: true,
     },
     password: {
@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema(
     },
     phonenumber: {
       type: Number,
-      unique:true,
+      unique: true,
       required: true,
     },
     isAdmin: {
@@ -31,7 +31,6 @@ const userSchema = mongoose.Schema(
     },
     gender: {
       type: String,
-      // required: true,
     },
     dateOfBirth: {
       type: Date,
@@ -43,13 +42,19 @@ const userSchema = mongoose.Schema(
     location: {
       type: String,
     },
-    profilepic: {
+    profilePicture: {
       type: String,
     },
-    coverpic: {
-      type: String,
+    coverPicture:{
+      type:String
     },
-    bio: {
+    education:{
+      type:String
+    },
+    work:{
+      type:String
+    },
+    about: {
       type: String,
     },
     following: [],
